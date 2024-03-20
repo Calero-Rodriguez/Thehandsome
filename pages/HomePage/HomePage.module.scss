@@ -1,0 +1,16 @@
+.swiperPopularCont {
+    height: 200px;
+
+    .swiperPopular {
+        height: 150px;
+        margin: 0 50px;
+
+        .swiperSlide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+
+}
