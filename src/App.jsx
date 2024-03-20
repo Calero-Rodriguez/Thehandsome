@@ -1,10 +1,12 @@
+import Companylogo from "./components/Logos/CompanyLogo";
 
-export function App() {
-  
 
+function App() {
   return (
-    <>
-      
-    </>
-  )
+    <div>
+      <Companylogo/>
+    </div>
+  );
 }
+
+export default App;
