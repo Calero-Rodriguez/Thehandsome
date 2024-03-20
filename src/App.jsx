@@ -1,10 +1,9 @@
-import Companylogo from "./components/Logos/CompanyLogo";
-
+import Navbar from "./components/Navbar/Navbar";
 
 function App() {
   return (
     <div>
-      <Companylogo/>
+      <Navbar />
     </div>
   );
 }

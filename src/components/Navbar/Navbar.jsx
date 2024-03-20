@@ -1,5 +1,4 @@
-import {Companylogo} from "../Logos/CompanyLogo";
-
+import Companylogo from "../Logos/Companylogo";
 
 export default function Navbar() {
   return (
