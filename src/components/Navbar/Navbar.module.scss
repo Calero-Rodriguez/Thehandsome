@@ -1,13 +1,51 @@
-.iconos_wrapper {
-    border: 2px solid black;
-    width: 700px;
-    height: 200px;
-    display: flex; /* Agrega esta línea para usar flexbox */
-    justify-content: center; /* Centra horizontalmente los elementos */
-    align-items: center; /* Centra verticalmente los elementos */
+.navCont {
 
-    > svg {
-        width: 100px;
-        height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .companyLogo {
+        width: auto;
+        height: auto;
+    }
+
+    .navSections {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+
+        > p:hover {
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+
+    .navExtras {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+
+        > p:hover {
+            cursor: pointer;
+            font-weight: bold;
+        }
+    }
+
+    .iconosWrapper {
+        width: auto;
+        height: auto;
+        display: flex;
+        justify-content: flex-end;
+        gap: 0.8em;
+
+        > svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        > svg:hover {
+            cursor: pointer;
+        }
     }
 }
