@@ -1,4 +1,8 @@
-import {Companylogo} from "../Logos/CompanyLogo";
+import Companylogo from "../Logos/Companylogo";
+import { Lupa } from "../Logos/Lupa";
+import { Prueba } from "../Logos/Prueba";
+
+
 
 
 export default function Navbar() {
@@ -6,7 +10,11 @@ export default function Navbar() {
     <div className="Contenedor">
       <div>
         <div>
-            <Companylogo/>
+            <Companylogo />
+        </div>
+        <div>
+            <Prueba/>
+            <Lupa/>
         </div>
       </div>
       <div>
