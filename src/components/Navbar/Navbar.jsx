@@ -2,9 +2,6 @@ import Companylogo from "../Logos/Companylogo";
 import { Lupa } from "../Logos/Lupa";
 import { Prueba } from "../Logos/Prueba";
 
-
-
-
 export default function Navbar() {
   return (
     <div className="Contenedor">
