@@ -1,6 +1,10 @@
+import styles from "./Navbar.module.scss";
 import Companylogo from "../Logos/Companylogo";
+import { Login } from "../Logos/Login";
 import { Lupa } from "../Logos/Lupa";
-import { Prueba } from "../Logos/Prueba";
+import { MyHeart } from "../Logos/MyHeart";
+import { MyPage } from "../Logos/MyPage";
+import { Shoppingbag } from "../Logos/Shoppingbag";
 
 export default function Navbar() {
   return (
@@ -26,6 +30,13 @@ export default function Navbar() {
             <p>MAGAZINE</p>
             <p>EVENT</p>
             <p>LOOK-BOOD</p>
+        </div>
+        <div className={styles.iconos_wrapper}>
+            <Lupa />
+            <Login />
+            <MyPage />
+            <MyHeart />
+            <Shoppingbag />
         </div>
       </div>
     </div>

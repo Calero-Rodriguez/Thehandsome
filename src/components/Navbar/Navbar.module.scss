@@ -1,0 +1,13 @@
+.iconos_wrapper {
+    border: 2px solid black;
+    width: 700px;
+    height: 200px;
+    display: flex; /* Agrega esta línea para usar flexbox */
+    justify-content: center; /* Centra horizontalmente los elementos */
+    align-items: center; /* Centra verticalmente los elementos */
+
+    > svg {
+        width: 100px;
+        height: 100px;
+    }
+}
