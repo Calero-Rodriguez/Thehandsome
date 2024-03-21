@@ -1,16 +1,28 @@
-.swiperPopularCont {
-    height: 200px;
+.swiperHeroCont {
 
-    .swiperPopular {
-        height: 150px;
-        margin: 0 50px;
+  .swiperHero {
+    width: 100%;
 
-        .swiperSlide {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+    .swiperSlide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .slideCont {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .slideText {
+            position: absolute;
+            color: white;
+            font-weight: bold;
+            font-size: xx-large;
+            top: 50%;
+            left: 7%;
         }
-
+      }
     }
-
+  }
 }
