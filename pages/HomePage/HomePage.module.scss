@@ -27,23 +27,25 @@
 }
 
 .newProductsSection {
+  width: inherit;
+  overflow: hidden;
   display: flex;
   flex-direction: row;
   background-color: #f8f8f8;
   padding: 3rem;
 
   .newProductsTitles {
+    width: 25%;
     display: flex;
     flex-direction: column;
-    padding: 0 72px;
   }
 
   .swiperNewProductsCont {
+    width:75%;
     padding: 0 72px;
 
-
     .swiperNewProducts {
-      width: 70vw;
+      width: 100%;
 
       .swiperSlide {
         display: flex;
@@ -56,8 +58,10 @@
           flex-direction: column;
 
           > img {
+            display: block;
             width: 50px;
             height: auto;
+            object-fit: cover;
           }
 
           .slideText {

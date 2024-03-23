@@ -1,4 +1,6 @@
 .footercont{
+    width: inherit;
+    overflow: hidden;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -33,7 +35,7 @@
                 width: 200px;
                 position: relative;
 
-    
+
                 button{
                     background: none;
                     border: none;
@@ -50,7 +52,7 @@
                 .familyClose{
                     display: none;
                 }
-    
+
                 .familyOpen{
                     display: flex;
                     flex-direction: column;
@@ -59,9 +61,9 @@
                     background-color: white;
                     border: 1px solid #E5E5E5;
                     padding: 10px;
-                    
+
                 }
-                
+
                 .triangleUp {
                     transform: rotate(180deg); cursor: pointer;
                 }
@@ -98,7 +100,7 @@
                     background-color: white;
                     border: 1px solid #E5E5E5;
                     padding: 10px;
-                    
+
                 }
 
                 .triangleUp {
@@ -110,7 +112,7 @@
                 }
             }
         }
-        
+
         .icons{
             display: flex;
             gap: 16px;
