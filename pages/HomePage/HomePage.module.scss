@@ -1,5 +1,4 @@
 .swiperHeroCont {
-
   .swiperHero {
     width: 100%;
 
@@ -15,12 +14,56 @@
         flex-direction: column;
 
         .slideText {
-            position: absolute;
-            color: white;
-            font-weight: bold;
-            font-size: xx-large;
-            top: 50%;
-            left: 7%;
+          position: absolute;
+          color: white;
+          font-weight: bold;
+          font-size: xx-large;
+          top: 50%;
+          left: 7%;
+        }
+      }
+    }
+  }
+}
+
+.newProductsSection {
+  display: flex;
+  flex-direction: row;
+  background-color: #f8f8f8;
+  padding: 3rem;
+
+  .newProductsTitles {
+    display: flex;
+    flex-direction: column;
+    padding: 0 72px;
+  }
+
+  .swiperNewProductsCont {
+    padding: 0 72px;
+
+
+    .swiperNewProducts {
+      width: 70vw;
+
+      .swiperSlide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slideCont {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+
+          > img {
+            width: 50px;
+            height: auto;
+          }
+
+          .slideText {
+            display: flex;
+            flex-direction: column;
+          }
         }
       }
     }

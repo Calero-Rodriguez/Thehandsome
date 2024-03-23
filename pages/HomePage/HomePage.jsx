@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./HomePage.module.scss";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
-import { swiperHeroData } from "./SwiperHeroData";
+import { swiperHeroData, swiperNewProductsData } from "./SwiperData";
 
 // Import Swiper styles
 import "swiper/css";
@@ -47,6 +47,38 @@ export const HomePage = () => {
               );
             })}
         </Swiper>
+      </div>
+      <div className={styles.newProductsSection}>
+        <div className={styles.newProductsTitles}>
+          <h2>New Products</h2>
+          <a href="">WOMEN</a>
+          <a href="">MEN</a>
+          <a href="">FASHION ACC.</a>
+        </div>
+        <div className={styles.swiperNewProductsCont}>
+          <Swiper
+            slidesPerView={5}
+            spaceBetween={30}
+            navigation={true}
+            modules={[Navigation]}
+            className={styles.swiperNewProducts}
+          >
+            {swiperNewProductsData &&
+            swiperNewProductsData.map((data, index) => {
+              return (
+              <SwiperSlide key={index} className={styles.swiperSlide}>
+                <div className={styles.slideCont}>
+                    <img src={data.imgPath} />
+                    <div className={styles.slideText}>
+                      <h5>{data.textUp}</h5>
+                      <p>{data.textDown}</p>
+                      <p>$ {data.price}</p>
+                    </div>
+                  </div>
+              </SwiperSlide>
+            )})}
+          </Swiper>
+        </div>
       </div>
     </div>
   );
