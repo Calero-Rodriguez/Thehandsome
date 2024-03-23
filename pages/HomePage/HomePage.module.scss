@@ -50,6 +50,27 @@
   .swiperNewProductsCont {
     width: 80%;
     margin: 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .newProductsPrevBtn {
+      cursor: pointer;
+
+      > svg {
+        height: 35px;
+        width: 35px;
+      }
+    }
+
+    .newProductsNextBtn {
+      cursor: pointer;
+
+      > svg {
+        height: 35px;
+        width: 35px;
+      }
+    }
 
         .swiperNewProducts {
 

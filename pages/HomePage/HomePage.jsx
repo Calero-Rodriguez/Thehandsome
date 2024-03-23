@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import styles from "./HomePage.module.scss";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Import Swiper React components
@@ -36,6 +36,7 @@ export const HomePage = () => {
       <div className={styles.swiperHeroCont}>
         <Swiper
           slidesPerView={1}
+          slidesPerGroup={5}
           loop={true}
           spaceBetween={30}
           centeredSlides={true}
@@ -75,7 +76,7 @@ export const HomePage = () => {
           <a href="">FASHION ACC.</a>
         </div>
         <div className={styles.swiperNewProductsCont}>
-        <div className={styles.newProductsPrevBtn} ref={prevRef} onClick={handlePrevButtonClick}><IoIosArrowBack /></div>
+          <div className={styles.newProductsPrevBtn} ref={prevRef} onClick={handlePrevButtonClick}><IoIosArrowBack /></div>
           <Swiper
             slidesPerView={5}
             slidesPerGroup={5}
@@ -102,6 +103,7 @@ export const HomePage = () => {
             );
             })}
           </Swiper>
+          <div className={styles.newProductsNextBtn} ref={nextRef} onClick={handleNextButtonClick}><IoIosArrowForward /></div>
           </div>
         </div>
       </div>
