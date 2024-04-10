@@ -1,5 +1,5 @@
 .swiperNewProductsCont {
-  width: 80%;
+  width: 70%;
   margin: 0 50px;
   display: flex;
   flex-direction: row;
@@ -28,11 +28,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 10px;
 
       .slideCont {
         display: flex;
         flex-direction: column;
+        width: 100%;
 
         .imgCont {
           position: relative;

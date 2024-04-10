@@ -11,6 +11,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
+import './styles.css';
+
 export const SwiperFirst = ({ swiperInfo }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -39,9 +41,10 @@ export const SwiperFirst = ({ swiperInfo }) => {
           <IoIosArrowBack />
         </div>
         <Swiper
+          cssMode={true}
           slidesPerView={5}
           slidesPerGroup={5}
-          spaceBetween={30}
+          spaceBetween={0}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
           modules={[Navigation]}
           className={styles.swiperNewProducts}
