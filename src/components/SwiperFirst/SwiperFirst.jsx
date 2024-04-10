@@ -1,5 +1,5 @@
-import React from "react";
 import styles from "./SwiperFirst.module.scss";
+import React, { useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -11,23 +11,22 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export const SwiperFirst = () => {
+export const SwiperFirst = ({ swiperInfo }) => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
+  const swiperRef = useRef(null);
 
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
-    const swiperRef = useRef(null);
+  const handlePrevButtonClick = () => {
+    if (swiperRef.current !== null) {
+      swiperRef.current.slidePrev();
+    }
+  };
 
-    const handlePrevButtonClick = () => {
-      if (swiperRef.current !== null) {
-        swiperRef.current.slidePrev();
-      }
-    };
-
-    const handleNextButtonClick = () => {
-      if (swiperRef.current !== null) {
-        swiperRef.current.slideNext();
-      }
-    };
+  const handleNextButtonClick = () => {
+    if (swiperRef.current !== null) {
+      swiperRef.current.slideNext();
+    }
+  };
 
   return (
     <>
@@ -47,21 +46,19 @@ export const SwiperFirst = () => {
           modules={[Navigation]}
           className={styles.swiperNewProducts}
         >
-          {swiperNewProductsData &&
-            swiperNewProductsData.map((data, index) => {
+          {swiperInfo &&
+            swiperInfo.map((data, index) => {
               return (
-                <div>
-                  <SwiperSlide key={index} className={styles.swiperSlide}>
-                    <div className={styles.slideCont}>
-                      <img src={data.imgPath} />
-                      <div className={styles.slideText}>
-                        <h5>{data.textUp}</h5>
-                        <p>{data.textDown}</p>
-                        <p>$ {data.price}</p>
-                      </div>
+                <SwiperSlide key={index} className={styles.swiperSlide}>
+                  <div className={styles.slideCont}>
+                    <img src={data.imgPath} />
+                    <div className={styles.slideText}>
+                      <h5>{data.textUp}</h5>
+                      <p>{data.textDown}</p>
+                      <p>$ {data.price}</p>
                     </div>
-                  </SwiperSlide>
-                </div>
+                  </div>
+                </SwiperSlide>
               );
             })}
         </Swiper>
