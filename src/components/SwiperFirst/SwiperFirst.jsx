@@ -51,7 +51,10 @@ export const SwiperFirst = ({ swiperInfo }) => {
               return (
                 <SwiperSlide key={index} className={styles.swiperSlide}>
                   <div className={styles.slideCont}>
-                    <img src={data.imgPath} />
+                    <div className={styles.imgCont}>
+                    <img id={styles.imgBack} src={data.imgHover} />
+                    <img id={styles.imgFront} src={data.imgPath} />
+                    </div>
                     <div className={styles.slideText}>
                       <h5>{data.textUp}</h5>
                       <p>{data.textDown}</p>
