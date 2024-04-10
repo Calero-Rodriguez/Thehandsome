@@ -35,10 +35,39 @@ export const HomePage = () => {
       <div className={styles.newProductsSection}>
         <div className={styles.prueba}>
           <div className={styles.newProductsTitles}>
-            <h2>New Products</h2>
-            <p onClick={() => handleNewProduct("women")}>WOMEN </p>
-            <p onClick={() => handleNewProduct("men")}>MEN</p>
-            <p onClick={() => handleNewProduct("fashion")}>FASHION ACC.</p>
+            <p id={styles.title}>New Products</p>
+            <ul className={styles.newProductsList}>
+              <li
+                id={
+                  currentCategory === swiperNewProductsWomen
+                    ? styles.selected
+                    : styles.notSelected
+                }
+                onClick={() => handleNewProduct("women")}
+              >
+                WOMEN{" "}
+              </li>
+              <li
+                id={
+                  currentCategory === swiperNewProductsMen
+                    ? styles.selected
+                    : styles.notSelected
+                }
+                onClick={() => handleNewProduct("men")}
+              >
+                MEN
+              </li>
+              <li
+                id={
+                  currentCategory === swiperNewProductsFashion
+                    ? styles.selected
+                    : styles.notSelected
+                }
+                onClick={() => handleNewProduct("fashion")}
+              >
+                FASHION ACC.
+              </li>
+            </ul>
           </div>
           <SwiperFirst swiperInfo={currentCategory} />
         </div>

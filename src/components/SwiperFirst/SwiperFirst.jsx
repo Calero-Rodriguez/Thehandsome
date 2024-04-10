@@ -46,6 +46,7 @@ export const SwiperFirst = ({ swiperInfo }) => {
           slidesPerGroup={5}
           spaceBetween={0}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
+
           modules={[Navigation]}
           className={styles.swiperNewProducts}
         >
