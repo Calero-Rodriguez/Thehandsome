@@ -1,4 +1,4 @@
-import styles from "./SwiperPopular.module.scss";
+import styles from "./SwiperLBook.module.scss";
 import React, { useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Import Swiper React components
@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export const SwiperPopular = ({ swiperInfo }) => {
+export const SwiperLBook = ({ swiperInfo }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);
@@ -54,13 +54,11 @@ export const SwiperPopular = ({ swiperInfo }) => {
                 <SwiperSlide key={index} className={styles.swiperSlide}>
                   <div className={styles.slideCont}>
                     <div className={styles.imgCont}>
-                    <img id={styles.imgBack} src={data.imgHover} />
                     <img id={styles.imgFront} src={data.imgPath} />
                     </div>
                     <div className={styles.slideText}>
                       <h5>{data.textUp}</h5>
                       <p>{data.textDown}</p>
-                      <p>$ {data.price}</p>
                     </div>
                   </div>
                 </SwiperSlide>

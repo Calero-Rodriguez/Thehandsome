@@ -51,7 +51,6 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background-color: #f8f8f8;
   padding: 1rem 0;
   margin-top: 1rem;
 
@@ -61,6 +60,42 @@
   }
 
   .popularProductsList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    .selected {
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .notSelected {
+      cursor: pointer;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+
+}
+
+.lbookProductsSection {
+  width: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+  margin-top: 1rem;
+
+  .title {
+    font-size: 2rem;
+    line-height: 3.6rem;
+  }
+
+  .lbookProductsList {
     list-style: none;
     margin: 0;
     padding: 0;

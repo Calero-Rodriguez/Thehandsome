@@ -645,7 +645,7 @@ export const swiperLookBookLatt = [
   {
     textUp: "LÄTT",
     textDown: "2024 S/S No. 9",
-    imgPath: "../../images_english/HelloIMG1716405668247.jpeg",
+    imgPath: "../../images_english/HelloIMG1716405668247.png",
   },
   {
     textUp: "LÄTT",
@@ -1060,7 +1060,7 @@ export const swiperLookBookSystem = [
   },
 ];
 
-export const swiperLookBookSystemHome = [
+export const swiperLookBookSystemHomme = [
   {
     textUp: "SYSTEM HOMME",
     textDown: "2024 S/S No. 3",
@@ -1113,7 +1113,7 @@ export const swiperLookBookSystemHome = [
   },
 ];
 
-export const swiperLookBookTimeHome = [
+export const swiperLookBookTimeHomme = [
   {
     textUp: "TIME HOMME",
     textDown: "2024 S/S No. 3",

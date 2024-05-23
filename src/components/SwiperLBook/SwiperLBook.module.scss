@@ -1,0 +1,79 @@
+.swiperPopularProductsCont {
+    width: 90%;
+    margin: 0 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+
+    &:hover .popularProductsPrevBtn,
+    &:hover .popularProductsNextBtn {
+      opacity: 1;
+    }
+
+    .popularProductsPrevBtn,
+    .popularProductsNextBtn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      cursor: pointer;
+      z-index: 10;
+      top: 30%;
+      background-color: lightgrey;
+      opacity: 0;
+      transition: opacity 300ms;
+
+      &:hover {
+        background-color: #000;
+      }
+
+      > svg {
+        color: white;
+        height: 35px;
+        width: 35px;
+      }
+    }
+
+    .popularProductsPrevBtn {
+      left: 0;
+    }
+
+    .popularProductsNextBtn {
+      right: 0;
+    }
+
+    .swiperPopularProducts {
+      .swiperSlide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .slideCont {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          cursor: pointer;
+
+          .imgCont {
+            position: relative;
+            height: 19rem;
+
+            img {
+              position: absolute;
+              width: 200px;
+              height: 302px;
+              transition: opacity 0.3s ease;
+            }
+          }
+
+          .slideText {
+            display: flex;
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
