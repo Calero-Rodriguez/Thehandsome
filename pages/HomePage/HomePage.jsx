@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "./HomePage.module.scss";
 
 import {
@@ -6,50 +6,72 @@ import {
   swiperNewProductsWomen,
   swiperNewProductsMen,
   swiperNewProductsFashion,
+  swiperPopularProductsWomen,
+  swiperPopularProductsMen,
+  swiperPopularProductsFashion,
 } from "./SwiperData";
 
 import { SwiperFirst } from "../../src/components/SwiperFirst/SwiperFirst";
 import { SwiperHero } from "../../src/components/SwiperHero/SwiperHero";
+import { SwiperPopular } from "../../src/components/SwiperPopular/SwiperPopular";
 
 export const HomePage = () => {
-  const [currentCategory, setCurrentCategory] = useState(
-    swiperNewProductsWomen
-  );
+  const [currentNewCategory, setCurrentNewCategory] = useState(swiperNewProductsWomen);
+  const [currentPopularCategory, setCurrentPopularCategory] = useState(swiperPopularProductsWomen);
 
-  const handleNewProduct = function (category) {
+  const handleNewProduct = (category) => {
     switch (category) {
       case "women":
-        setCurrentCategory(swiperNewProductsWomen);
+        setCurrentNewCategory(swiperNewProductsWomen);
         break;
       case "men":
-        setCurrentCategory(swiperNewProductsMen);
+        setCurrentNewCategory(swiperNewProductsMen);
         break;
       case "fashion":
-        setCurrentCategory(swiperNewProductsFashion);
+        setCurrentNewCategory(swiperNewProductsFashion);
+        break;
+      default:
         break;
     }
   };
+
+  const handlePopularProduct = (category) => {
+    switch (category) {
+      case "women":
+        setCurrentPopularCategory(swiperPopularProductsWomen);
+        break;
+      case "men":
+        setCurrentPopularCategory(swiperPopularProductsMen);
+        break;
+      case "fashion":
+        setCurrentPopularCategory(swiperPopularProductsFashion);
+        break;
+      default:
+        break;
+    }
+  };
+
   return (
     <div>
       <SwiperHero swiperInfo={swiperHeroData} />
       <div className={styles.newProductsSection}>
         <div className={styles.prueba}>
           <div className={styles.newProductsTitles}>
-            <p id={styles.title}>New Products</p>
+            <p className={styles.title}>New Products</p>
             <ul className={styles.newProductsList}>
               <li
-                id={
-                  currentCategory === swiperNewProductsWomen
+                className={
+                  currentNewCategory === swiperNewProductsWomen
                     ? styles.selected
                     : styles.notSelected
                 }
                 onClick={() => handleNewProduct("women")}
               >
-                WOMEN{" "}
+                WOMEN
               </li>
               <li
-                id={
-                  currentCategory === swiperNewProductsMen
+                className={
+                  currentNewCategory === swiperNewProductsMen
                     ? styles.selected
                     : styles.notSelected
                 }
@@ -58,8 +80,8 @@ export const HomePage = () => {
                 MEN
               </li>
               <li
-                id={
-                  currentCategory === swiperNewProductsFashion
+                className={
+                  currentNewCategory === swiperNewProductsFashion
                     ? styles.selected
                     : styles.notSelected
                 }
@@ -69,8 +91,44 @@ export const HomePage = () => {
               </li>
             </ul>
           </div>
-          <SwiperFirst swiperInfo={currentCategory} />
+          <SwiperFirst swiperInfo={currentNewCategory} />
         </div>
+      </div>
+      <div className={styles.popularProductsSection}>
+        <p className={styles.title}>Popular products currently being purchased</p>
+        <ul className={styles.popularProductsList}>
+          <li
+            className={
+              currentPopularCategory === swiperPopularProductsWomen
+                ? styles.selected
+                : styles.notSelected
+            }
+            onClick={() => handlePopularProduct("women")}
+          >
+            WOMEN
+          </li>
+          <li
+            className={
+              currentPopularCategory === swiperPopularProductsMen
+                ? styles.selected
+                : styles.notSelected
+            }
+            onClick={() => handlePopularProduct("men")}
+          >
+            MEN
+          </li>
+          <li
+            className={
+              currentPopularCategory === swiperPopularProductsFashion
+                ? styles.selected
+                : styles.notSelected
+            }
+            onClick={() => handlePopularProduct("fashion")}
+          >
+            FASHION ACC.
+          </li>
+        </ul>
+        <SwiperPopular swiperInfo={currentPopularCategory} />
       </div>
     </div>
   );

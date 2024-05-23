@@ -1,4 +1,4 @@
-import styles from "./SwiperFirst.module.scss";
+import styles from "./SwiperPopular.module.scss";
 import React, { useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Import Swiper React components
@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export const SwiperFirst = ({ swiperInfo }) => {
+export const SwiperPopular = ({ swiperInfo }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);

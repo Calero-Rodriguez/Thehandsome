@@ -17,7 +17,7 @@ export const SwiperHero = ({swiperInfo}) => {
       <div className={styles.swiperHeroCont}>
         <Swiper
           slidesPerView={1}
-          slidesPerGroup={5}
+          slidesPerGroup={1}
           loop={true}
           spaceBetween={30}
           centeredSlides={true}
@@ -41,6 +41,7 @@ export const SwiperHero = ({swiperInfo}) => {
                     <div className={styles.slideText}>
                       <h3>{data.textUp}</h3>
                       <h3>{data.textDown}</h3>
+                      <h3>{data.description}</h3>
                     </div>
                   </div>
                 </SwiperSlide>
