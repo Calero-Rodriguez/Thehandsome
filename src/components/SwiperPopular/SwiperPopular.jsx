@@ -1,4 +1,4 @@
-import styles from "./SwiperFirst.module.scss";
+import styles from "./SwiperPopular.module.scss";
 import React, { useRef } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 // Import Swiper React components
@@ -11,7 +11,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-export const SwiperFirst = ({ swiperInfo }) => {
+export const SwiperPopular = ({ swiperInfo }) => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   const swiperRef = useRef(null);
@@ -30,9 +30,9 @@ export const SwiperFirst = ({ swiperInfo }) => {
 
   return (
     <>
-      <div className={styles.swiperNewProductsCont}>
+      <div className={styles.swiperPopularProductsCont}>
         <div
-          className={styles.newProductsPrevBtn}
+          className={styles.popularProductsPrevBtn}
           ref={prevRef}
           onClick={handlePrevButtonClick}
         >
@@ -40,13 +40,13 @@ export const SwiperFirst = ({ swiperInfo }) => {
         </div>
         <Swiper
           cssMode={true}
-          slidesPerView={5}
-          slidesPerGroup={5}
-          spaceBetween={0}
+          slidesPerView={6}
+          slidesPerGroup={6}
+          spaceBetween={20}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
 
           modules={[Navigation]}
-          className={styles.swiperNewProducts}
+          className={styles.swiperPopularProducts}
         >
           {swiperInfo &&
             swiperInfo.map((data, index) => {
@@ -68,7 +68,7 @@ export const SwiperFirst = ({ swiperInfo }) => {
             })}
         </Swiper>
         <div
-          className={styles.newProductsNextBtn}
+          className={styles.popularProductsNextBtn}
           ref={nextRef}
           onClick={handleNextButtonClick}
         >
